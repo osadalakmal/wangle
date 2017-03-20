@@ -4,4 +4,4 @@ env:
   global:
     - HOMEBREW_DEPENDENCIES="folly cmake openssl"
 compiler: clang
-script: cmake . && make && ctest
+script: cd wangle && cmake . && make && ctest
