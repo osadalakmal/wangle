@@ -1,7 +1,7 @@
-- os: osx
-  language: cpp
-  env:
-    global:
-      - HOMEBREW_DEPENDENCIES="folly cmake openssl"
-  compiler: clang
-  script: cmake . && make && ctest
+os: osx
+language: cpp
+env:
+  global:
+    - HOMEBREW_DEPENDENCIES="folly cmake openssl"
+compiler: clang
+script: cmake . && make && ctest
