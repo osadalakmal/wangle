@@ -4,4 +4,9 @@ env:
   global:
     - HOMEBREW_DEPENDENCIES="folly cmake openssl"
 compiler: clang
+before_install:
+  if [ "$TRAVIS_OS_NAME" == "osx" ]; then
+    brew update
+    brew install openssl folly
+  fi
 script: cd wangle && cmake . && make && ctest
