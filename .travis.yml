@@ -3,6 +3,7 @@ language: cpp
 env:
   global:
     - HOMEBREW_DEPENDENCIES="folly cmake openssl"
+    - OPENSSL_ROOT_DIR="/usr/local/opt/openssl/"
 compiler: clang
 before_install: |
   if [ "$TRAVIS_OS_NAME" == "osx" ]; then
